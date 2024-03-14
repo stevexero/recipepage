@@ -93,6 +93,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - I learned how to override the bullet styles of a list item.
 
+## HTML
+
 ```html
 <ul class="custom-bullets">
   <li>
@@ -107,6 +109,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
   </li>
 </ul>
 ```
+
+## CSS
 
 ```css
 ul.custom-bullets {
