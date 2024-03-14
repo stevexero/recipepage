@@ -55,6 +55,39 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Screen reader accessibility - elaborate
 - Normalize CSS - elaborate
 - Prettier Ignore
+- noreferrer and noopener - I learned that using "rel="noreferrer noopener"" in your link tag is pretty important. Without using them, when a link is clicked, it could potentially leak information from the old page (where you clicked the link) into the new page, and can lead to JavaScript execution, leading to malicious activities and phishing attacks. Here's what ChatGPT says:
+
+> ## noopener
+>
+> - Purpose: Prevents the newly opened page from having control over the page that opened it.
+> - Security Benefit: This is particularly important because, without noopener, the new page
+>   (the page you link to) can potentially access the window.opener property and execute JavaScript
+>   in the opening page's context. This can lead to malicious activities, such as phishing attacks,
+>   where the original page is replaced with a fake one to steal information.
+> - Performance Benefit: Using noopener also improves performance for the page that opened the
+>   link. Without it, the new page shares the same process as the opener page, which could affect the
+>   performance of the original page.
+>
+> ## noreferrer
+>
+> - Purpose: Prevents the browser from sending the HTTP Referer header to the linked page.
+> - Privacy Benefit: This hides the referrer information (the page the user came from) from the
+>   destination page, which can be particularly useful for privacy reasons, ensuring that the
+>   destination site does not know where the traffic originated from.
+> - Security Benefit: Similar to noopener, noreferrer also implies noopener behavior in modern
+>   browsers, providing the same security benefits by not allowing the new page to have control over
+>   the originating page.
+> - Compatibility Note: Before noopener was widely supported, noreferrer was often used to achieve
+>   similar security benefits. Now, noopener is supported in most modern browsers, but noreferrer is
+>   still useful for older browsers and for situations where you want to hide referrer information.
+>
+> ## Using Both
+>
+> While noopener alone can protect against the security vulnerabilities mentioned and is widely
+> supported in modern browsers, adding noreferrer as well ensures broader compatibility with older
+> browsers and also addresses privacy concerns by not leaking referrer information. Thus, using
+> rel="noreferrer noopener" together in links to external sites that open in a new tab/window (target="\_blank")
+> is a good practice for enhancing both security and privacy.
 
 ### Continued development
 
@@ -69,8 +102,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 [^1]: Source: [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/2023/REC-WCAG21-20230921/#abstract)
 [^2]: Source [About normalize.css](https://nicolasgallagher.com/about-normalize-css/)
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 

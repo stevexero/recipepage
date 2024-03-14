@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap')
+
+$background-color-primary: #F3E5D7
+$background-color-secondary: #FFFFFF
+$background-color-tertiary: #FFF7FB
+$heading-color-primary: #312E2C
+$heading-color-secondary: #854632
+$heading-color-tertiary: #7A284E
+$body-color-primary: #5F564D
+$rule-color: #E3DDD7
+ 
+$font-weight-normal: 400
+$font-weight-semi-bold: 600
+$font-weight-bold: 700
+
+$font-weight-heading-large: $font-weight-normal
+$font-weight-heading-medium: $font-weight-normal
+$font-weight-heading-small: $font-weight-semi-bold
+$font-weight-body-regular: $font-weight-normal
+$font-weight-body-bold: $font-weight-bold
+
+$font-size-heading-large: 40px
+$font-size-heading-medium: 28px
+$font-size-heading-small: 20px
+$font-size-body: 16px
+
+$line-height-heading-large: 100%
+$line-height-heading-medium: 100%
+$line-height-heading-small: 100%
+$line-height-body: 150%
+
+$border-radius-large: 24px
+$border-radius-small: 12px
+
+%outfit-regular
+    font-family: "Outfit", sans-serif
+    font-optical-sizing: auto
+    font-weight: $font-weight-normal
+    font-style: normal
+
+%outfit-semi-bold
+    font-family: "Outfit", sans-serif
+    font-optical-sizing: auto
+    font-weight: $font-weight-semi-bold
+    font-style: normal
+
+%outfit-bold
+    font-family: "Outfit", sans-serif
+    font-optical-sizing: auto
+    font-weight: $font-weight-bold
+    font-style: normal
+
+%young-serif-regular
+    font-family: "Young Serif", serif
+    font-weight: $font-weight-normal
+    font-style: normal
+
+.heading-large
+    @extend %young-serif-regular
+
+.heading-medium
+    @extend %young-serif-regular
+
+.heading-small
+    @extend %outfit-bold
+
+.body-regular
+    @extend %outfit-regular
+
+.body-bold
+    @extend %outfit-semi-bold
+
