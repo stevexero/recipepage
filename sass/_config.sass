@@ -9,25 +9,33 @@ $heading-color-tertiary: #7A284E
 $body-color-primary: #5F564D
 $rule-color: #E3DDD7
  
+$font-weight-light: 300
 $font-weight-normal: 400
-$font-weight-semi-bold: 600
-$font-weight-bold: 700
+$font-weight-semi-bold: 500
+$font-weight-bold: 600
+$font-weight-heavy: 700
 
 $font-weight-heading-large: $font-weight-normal
 $font-weight-heading-medium: $font-weight-normal
 $font-weight-heading-small: $font-weight-semi-bold
 $font-weight-body-regular: $font-weight-normal
 $font-weight-body-bold: $font-weight-bold
+$font-weight-label: $font-weight-bold
+$font-weight-value: $font-weight-normal
 
-$font-size-heading-large: 40px
+$font-size-heading-large: 36px
 $font-size-heading-medium: 28px
 $font-size-heading-small: 20px
 $font-size-body: 16px
+$font-size-label: 16px
+$font-size-value: 16px
 
 $line-height-heading-large: 100%
 $line-height-heading-medium: 100%
 $line-height-heading-small: 100%
 $line-height-body: 150%
+$line-height-label: 150%
+$line-height-value: 150%
 
 $border-radius-large: 24px
 $border-radius-small: 12px
@@ -35,8 +43,10 @@ $border-radius-small: 12px
 %outfit-regular
     font-family: "Outfit", sans-serif
     font-optical-sizing: auto
-    font-weight: $font-weight-normal
+    font-weight: $font-weight-light
     font-style: normal
+    line-height: $line-height-body
+    color: $body-color-primary
 
 %outfit-semi-bold
     font-family: "Outfit", sans-serif
@@ -47,13 +57,18 @@ $border-radius-small: 12px
 %outfit-bold
     font-family: "Outfit", sans-serif
     font-optical-sizing: auto
-    font-weight: $font-weight-bold
+    font-weight: $font-weight-heading-small
     font-style: normal
+    color: $heading-color-tertiary
+    font-size: $font-size-heading-small
 
 %young-serif-regular
     font-family: "Young Serif", serif
     font-weight: $font-weight-normal
     font-style: normal
+    font-size: $font-size-heading-large
+    line-height: $line-height-heading-large
+    color: $heading-color-primary
 
 .heading-large
     @extend %young-serif-regular
@@ -66,7 +81,36 @@ $border-radius-small: 12px
 
 .body-regular
     @extend %outfit-regular
+    margin-top: 24px
 
 .body-bold
     @extend %outfit-semi-bold
 
+ul.custom-bullets
+    list-style-type: none
+    padding-left: 0
+
+ul.custom-bullets li
+    position: relative
+    padding-left: 40px
+
+ul.custom-bullets li::before
+    content: '•'
+    position: absolute
+    top: 50%
+    left: 8px
+    font-size: 13px
+    color: $heading-color-tertiary
+    transform: translateY(-50%)
+
+li
+    margin-top: 8px
+
+.label
+    @extend %outfit-semi-bold
+    letter-spacing: 0.2px
+    color: $body-color-primary
+    font-weight: 600
+
+.value
+    @extend %outfit-regular

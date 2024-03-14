@@ -89,6 +89,47 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 > rel="noreferrer noopener" together in links to external sites that open in a new tab/window (target="\_blank")
 > is a good practice for enhancing both security and privacy.
 
+- Heading tags have a prebuilt margin on the top and bottom. This is to ensure a clear and visible hierarchy for readability and accessibility. While working closely with the design file and setting consistent padding around the elements, this got tricky. However, you can reset the heading tags to include no margin as long as the hierarchy is still visible, which can be done using padding.
+
+- I learned how to override the bullet styles of a list item.
+
+```html
+<ul class="custom-bullets">
+  <li>
+    <span class="label">Total</span
+    ><span class="value">: Approximately 10 minutes</span>
+  </li>
+  <li>
+    <span class="label">Preparation</span><span class="value">: 5 minutes</span>
+  </li>
+  <li>
+    <span class="label">Cooking</span><span class="value">: 5 minutes</span>
+  </li>
+</ul>
+```
+
+```css
+ul.custom-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.custom-bullets li {
+  position: relative;
+  padding-left: 40px;
+}
+
+ul.custom-bullets li::before {
+  content: '•';
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  font-size: 13px;
+  color: #7a284e;
+  transform: translateY(-50%);
+}
+```
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
