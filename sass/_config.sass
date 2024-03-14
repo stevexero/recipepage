@@ -66,15 +66,18 @@ $border-radius-small: 12px
     font-family: "Young Serif", serif
     font-weight: $font-weight-normal
     font-style: normal
-    font-size: $font-size-heading-large
     line-height: $line-height-heading-large
-    color: $heading-color-primary
 
 .heading-large
     @extend %young-serif-regular
+    font-size: $font-size-heading-large
+    color: $heading-color-primary
 
 .heading-medium
     @extend %young-serif-regular
+    font-size: $font-size-heading-medium
+    color: $heading-color-secondary
+    font-weight: 400
 
 .heading-small
     @extend %outfit-bold
@@ -99,7 +102,7 @@ ul.custom-bullets li::before
     position: absolute
     top: 50%
     left: 8px
-    font-size: 13px
+    font-size: 20px
     color: $heading-color-tertiary
     transform: translateY(-50%)
 

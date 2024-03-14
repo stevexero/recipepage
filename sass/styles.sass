@@ -7,6 +7,7 @@ body
     flex-direction: column
     align-items: center
     justify-content: center
+    @extend %outfit-regular
 
     main
         width: 100%
@@ -25,3 +26,9 @@ body
                 padding-bottom: 10px
                 background-color: config.$background-color-tertiary
                 border-radius: config.$border-radius-small
+
+            #ingredients
+                margin-top: 32px
+                
+                li:first-child
+                    margin-top: 24px

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
-.value, .body-regular {
+body, .value, .body-regular {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -29,9 +29,18 @@
   font-family: "Young Serif", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 36px;
   line-height: 100%;
+}
+
+.heading-large {
+  font-size: 36px;
   color: #312E2C;
+}
+
+.heading-medium {
+  font-size: 28px;
+  color: #854632;
+  font-weight: 400;
 }
 
 .body-regular {
@@ -53,7 +62,7 @@ ul.custom-bullets li::before {
   position: absolute;
   top: 50%;
   left: 8px;
-  font-size: 13px;
+  font-size: 20px;
   color: #7A284E;
   transform: translateY(-50%);
 }
@@ -93,6 +102,12 @@ body main article aside {
   padding-bottom: 10px;
   background-color: #FFF7FB;
   border-radius: 12px;
+}
+body main article #ingredients {
+  margin-top: 32px;
+}
+body main article #ingredients li:first-child {
+  margin-top: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */
