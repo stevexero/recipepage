@@ -53,6 +53,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### What I learned
 
 - Screen reader accessibility - elaborate
+- Normalize CSS - elaborate
+- Prettier Ignore
 
 ### Continued development
 
@@ -63,8 +65,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/) - This guide is helping me to better understand how to make the content of my web sites accessible to as many users as possible, including those with disabilities such as "blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, and combinations of these, and some accommodation for learning disabilities and cognitive limitations."[^1]
 - [Sass](https://sass-lang.com/) - While I've used Sass in the past, their documentation helped me get a better understanding of this CSS preprocessor tool.
 - [BEM](https://getbem.com/) - This guide helped me adopt the methodology and naming convention for organizing CSS code to make it more readable, scalable, and easier to maintain.
+- [Normalize CSS](https://necolas.github.io/normalize.css/) - This seems to be the most comprehennsive CSS reset (but not actually a reset) that I've found so far. I haven't compared it line-by-line with Eric Meyer's CSS Reset as of yet, but it is in my plans. I'm also reading in the about section that it doesn't reset every element, instead it "retains many useful default browser styles[^2]." I do notice, however, that this post is written in 2012, so I may have to dig deeper into some research. While browsing Normalize css's [GirHub](https://github.com/necolas/normalize.css), I came across an interesting [issue](https://github.com/necolas/normalize.css/issues/880) that shows that the project may no longer be maintained. There are some alternatives by the community that I may look into. [This one](https://github.com/u1ui/norm.css) has tons of listed resources.
 
 [^1]: Source: [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/2023/REC-WCAG21-20230921/#abstract)
+[^2]: Source [About normalize.css](https://nicolasgallagher.com/about-normalize-css/)
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
