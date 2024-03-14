@@ -81,4 +81,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-I'd like to give a shoutout to Shashi Lo [X](https://www.twitter.com/shashiwhocodes) for hosting the [Gridiron Survivor Project](https://www.youtube.com/watch?v=JfLfIKMgnDQ&list=PLxiHOcgq5czRYfmc-bO_aABECrtBE3YR3) as well as Corina Murg [LinkedIn](https://www.linkedin.com/in/corinamurg/) for diving deep into accessibility right when I became very interested in it!
+I'd like to give a shoutout to [Shashi Lo](https://github.com/shashilo) [X](https://www.twitter.com/shashiwhocodes) for hosting the [Gridiron Survivor Project](https://www.youtube.com/watch?v=JfLfIKMgnDQ&list=PLxiHOcgq5czRYfmc-bO_aABECrtBE3YR3) as well as [Corina Murg](https://github.com/CorinaMurg) [LinkedIn](https://www.linkedin.com/in/corinamurg/) for diving deep into accessibility right when I became very interested in it!
