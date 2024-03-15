@@ -170,6 +170,16 @@ hr {
   width: 100%;
   margin-top: 12px;
 }
+.recipe-page .recipe__visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 .recipe-page .recipe__table_row:last-child td {
   border-bottom: none;
 }
