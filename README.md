@@ -53,8 +53,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### What I learned
 
 - Screen reader accessibility - elaborate
-- Normalize CSS - elaborate
-- Prettier Ignore
+- Normalize CSS - I learned that this repo has many issues, is not maintained, and has alternatives. I didn't have to do too much tweaking to the file and it worked on my end, but I'd like to get involved in the world of CSS resets and normalization.
+- Prettier Ignore - I learned that you can create a file called .prettierignore and include a path to the file you'd like prettier not to format-on-save.
 - noreferrer and noopener - I learned that using "rel="noreferrer noopener"" in your link tag is pretty important. Without using them, when a link is clicked, it could potentially leak information from the old page (where you clicked the link) into the new page, and can lead to JavaScript execution, leading to malicious activities and phishing attacks. Here's what ChatGPT says:
 
 > ## noopener
@@ -134,7 +134,7 @@ ul.custom-bullets li::before {
 }
 ```
 
-- Inheretance - elaborate (from bullet style, fixed by assigning font to body)
+- Inheretance - This is a deep subject! But it's also familiarized me more with the dev tools. My first run in was when styling some bullet points from two unordered lists. The first list was in a container while the second was not. When setting the font-size to the :after pseudo selector, both lists' bullet styles behaved differently. Upon examining the dev tools, each list was showing me what CSS properties were inherited. Very eye-opening. My solution was to implement a default font-style to the body element, which did the trick! Also, while refactoring my Sass code to comply with BEM standards, I had to remove a lot of my nesting, as it goes against said standards. I ran into a few instances where I had to inspect where styles were getting inherited from. Another example being on a top margin that wasn't budging. The element was a list item in an unordered list (again!), and being as I have two unordered lists, selecting that list element as a first child proved to be daunting. I attempted to select the first unordered list via the first child pseudo selector and applying a red background color to it, but I just couldn't get it. I will try to be more cognizant of this in the future. My workaround was to select the small heading (and there was, thankfully, only one!) and give it a negative margin on the bottom. Kind of hacky, I know, but it worked!
 
 - Just like overriding the bullet styles from an unordered list above, I learned how to manipulate the numbers in an ordered list. It was a bit trickier, but adding a container div within my list item helped.
 
@@ -244,4 +244,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-I'd like to give a shoutout to [Shashi Lo](https://github.com/shashilo) [X](https://www.twitter.com/shashiwhocodes) for hosting the [Gridiron Survivor Project](https://www.youtube.com/watch?v=JfLfIKMgnDQ&list=PLxiHOcgq5czRYfmc-bO_aABECrtBE3YR3) as well as [Corina Murg](https://github.com/CorinaMurg) [LinkedIn](https://www.linkedin.com/in/corinamurg/) for diving deep into accessibility right when I became very interested in it!
+I'd like to give a shoutout to [Shashi Lo](https://github.com/shashilo) [X](https://www.twitter.com/shashiwhocodes) for hosting the [Gridiron Survivor Project](https://www.youtube.com/watch?v=JfLfIKMgnDQ&list=PLxiHOcgq5czRYfmc-bO_aABECrtBE3YR3) as well as [Corina Murg](https://github.com/CorinaMurg) [LinkedIn](https://www.linkedin.com/in/corinamurg/) for diving deep into accessibility right when I became very interested in it! I'd also like to give a shoutout to [Ryan Furrer](https://twitter.com/ryandotfurrer) for answering my question about Prettier and team config files!
