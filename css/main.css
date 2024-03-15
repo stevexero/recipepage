@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
-body, .table-label, .value, .body-regular {
+.recipe-page, .table-label, .value, .body-regular {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -127,7 +127,7 @@ tr:last-child td {
   border-bottom: none;
 }
 
-body {
+.recipe-page {
   width: 100vw;
   background-color: #F3E5D7;
   display: flex;
@@ -135,12 +135,12 @@ body {
   align-items: center;
   justify-content: center;
 }
-body main {
+.recipe-page main {
   width: 100%;
   background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
-  body main {
+  .recipe-page main {
     box-sizing: border-box;
     max-width: 736px;
     margin-top: 123px;
@@ -150,27 +150,27 @@ body main {
     border-radius: 24px;
   }
 }
-body main img {
+.recipe-page main img {
   max-width: 100%;
 }
 @media screen and (min-width: 768px) {
-  body main img {
+  .recipe-page main img {
     border-radius: 12px;
   }
 }
-body main article {
+.recipe-page main article {
   max-width: 100%;
   padding: 35px 32px;
 }
 @media screen and (min-width: 768px) {
-  body main article {
+  .recipe-page main article {
     padding: 0;
   }
-  body main article #introduction {
+  .recipe-page main article #introduction {
     margin-top: 32px;
   }
 }
-body main article aside {
+.recipe-page main article aside {
   margin-top: 28px;
   padding: 24px;
   padding-bottom: 10px;
@@ -178,50 +178,50 @@ body main article aside {
   border-radius: 12px;
 }
 @media screen and (min-width: 768px) {
-  body main article aside {
+  .recipe-page main article aside {
     padding: 28px;
     padding-bottom: 12px;
   }
 }
-body main article #ingredients {
+.recipe-page main article #ingredients {
   margin-top: 32px;
 }
-body main article #ingredients li:first-child {
+.recipe-page main article #ingredients li:first-child {
   margin-top: 24px;
 }
-body main article #instructions {
+.recipe-page main article #instructions {
   margin-top: 32px;
 }
-body main article #instructions ol li .container {
+.recipe-page main article #instructions ol li .container {
   width: 100%;
   max-width: 100%;
   margin-left: 18px;
 }
-body main article #instructions ol li .container .value {
+.recipe-page main article #instructions ol li .container .value {
   padding-right: 12px;
 }
 @media screen and (min-width: 768px) {
-  body main article #instructions ol li .container {
+  .recipe-page main article #instructions ol li .container {
     width: 617px;
   }
 }
-body main article #instructions ol li:first-child {
+.recipe-page main article #instructions ol li:first-child {
   margin-top: 24px;
 }
-body main article #nutrition {
+.recipe-page main article #nutrition {
   margin-top: 32px;
 }
-body main article #nutrition p {
+.recipe-page main article #nutrition p {
   margin-bottom: 0;
   display: inline-block;
   padding-right: 12px;
 }
 @media screen and (min-width: 768px) {
-  body main article #nutrition p {
+  .recipe-page main article #nutrition p {
     max-width: 617px;
   }
 }
-body footer {
+.recipe-page__footer {
   text-align: center;
 }
 
