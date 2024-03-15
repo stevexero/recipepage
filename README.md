@@ -221,6 +221,23 @@ ol li .container {
 
 - I learned that you CANNOT place a horizontal rule `<hr>` inside of a table where the data goes. It will render it outside of the actual table no matter where you place it.
 
+- I learned about map-get in Sass. This is an awesome way to clean up your variables!
+
+### Sass
+
+```
+// Font Weights
+$font-weights: (light: 300, normal: 400, semi-bold: 500, bold: 600, heavy: 700)
+
+%outfit
+    font-family: "Outfit", sans-serif
+    font-optical-sizing: auto
+    font-weight: map-get($font-weights, light)
+    font-style: normal
+    line-height: map-get($line-heights, body)
+    color: map-get($colors, body-primary)
+```
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
