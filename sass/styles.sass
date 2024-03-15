@@ -13,12 +13,30 @@ body
         width: 100%
         background-color: config.$background-color-secondary
 
+        @media screen and (min-width: config.$desktop)
+            box-sizing: border-box
+            max-width: 736px
+            margin-top: 123px
+            margin-bottom: 124px
+            padding: 40px
+            padding-bottom: 28px
+            border-radius: config.$border-radius-large
+
         img
             max-width: 100%
+
+            @media screen and (min-width: config.$desktop)
+                border-radius: config.$border-radius-small
 
         article
             max-width: 100%
             padding: 35px 32px
+
+            @media screen and (min-width: config.$desktop)
+                padding: 0
+
+                #introduction
+                    margin-top: 32px
 
             aside
                 margin-top: 28px
@@ -26,6 +44,11 @@ body
                 padding-bottom: 10px
                 background-color: config.$background-color-tertiary
                 border-radius: config.$border-radius-small
+
+                @media screen and (min-width: config.$desktop)
+                    padding: 28px
+                    padding-bottom: 12px
+
 
             #ingredients
                 margin-top: 32px
@@ -42,6 +65,9 @@ body
                             width: 272px
                             margin-left: 18px
 
+                            @media screen and (min-width: config.$desktop)
+                                width: 617px
+
                     li:first-child
                         margin-top: 24px
 
@@ -51,6 +77,9 @@ body
                 p
                     max-width: 310px
                     margin-bottom: 0
+
+                    @media screen and (min-width: config.$desktop)
+                        max-width: 617px
 
     footer
         text-align: center

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap')
 
+$desktop: 768px
+
 $background-color-primary: #F3E5D7
 $background-color-secondary: #FFFFFF
 $background-color-tertiary: #FFF7FB
@@ -72,6 +74,9 @@ $border-radius-small: 12px
     @extend %young-serif-regular
     font-size: $font-size-heading-large
     color: $heading-color-primary
+
+    @media screen and (min-width: $desktop)
+        font-size: 40px
 
 .heading-medium
     @extend %young-serif-regular
@@ -148,3 +153,10 @@ td
     @extend %outfit-semi-bold
     color: $heading-color-secondary
     font-weight: 600
+    padding-right: 72px
+
+    @media screen and (min-width: $desktop)
+        padding-right: 52px
+
+tr:last-child td
+  border-bottom: none
