@@ -62,8 +62,12 @@ body
                 ol
                     li
                         .container
-                            width: 272px
+                            width: 100%
+                            max-width: 100%
                             margin-left: 18px
+
+                            .value
+                                padding-right: 12px
 
                             @media screen and (min-width: config.$desktop)
                                 width: 617px
@@ -75,8 +79,9 @@ body
                 margin-top: 32px
 
                 p
-                    max-width: 310px
                     margin-bottom: 0
+                    display: inline-block
+                    padding-right: 12px
 
                     @media screen and (min-width: config.$desktop)
                         max-width: 617px
