@@ -9,7 +9,7 @@
     justify-content: center
     @extend %outfit-regular
 
-    main
+    &__main
         width: 100%
         background-color: config.$background-color-secondary
 
@@ -22,69 +22,101 @@
             padding-bottom: 28px
             border-radius: config.$border-radius-large
 
-        img
-            max-width: 100%
+    &__image
+        max-width: 100%
+
+        @media screen and (min-width: config.$desktop)
+            border-radius: config.$border-radius-small
+
+    .recipe
+        max-width: 100%
+        padding: 35px 32px
+
+        @media screen and (min-width: config.$desktop)
+            padding: 0
+
+            &__introduction
+                margin-top: 32px
+
+        &__title
+            @include config.heading-large
+
+        &__description
+            @include config.body-regular
+
+        &__preparation-time
+            margin-top: 28px
+            padding: 24px
+            padding-bottom: 10px
+            background-color: config.$background-color-tertiary
+            border-radius: config.$border-radius-small
 
             @media screen and (min-width: config.$desktop)
-                border-radius: config.$border-radius-small
+                padding: 28px
+                padding-bottom: 12px
 
-        article
+        &__heading-small
+            @include config.heading-small
+            margin-bottom: -8px
+
+        &__list
+            @include config.custom-bullets
+
+        &__list-item
+            @include config.list-item
+
+        &__label
+            @include config.label
+
+        &__value
+            @include config.value
+
+        &__ingredients
+            margin-top: 32px
+            
+            li:first-child
+                margin-top: 24px
+
+        &__heading-medium
+            @include config.heading-medium
+
+        &__instructions
+            margin-top: 32px
+
+        &__ordered-list
+            @include config.ordered-list
+
+        &__container
+            width: 100%
             max-width: 100%
-            padding: 35px 32px
+            margin-left: 18px
+
+        &__value
+            padding-right: 12px
 
             @media screen and (min-width: config.$desktop)
-                padding: 0
+                width: 617px
 
-                #introduction
-                    margin-top: 32px
+        &__nutrition
+            margin-top: 32px
 
-            aside
-                margin-top: 28px
-                padding: 24px
-                padding-bottom: 10px
-                background-color: config.$background-color-tertiary
-                border-radius: config.$border-radius-small
+        &__description
+            margin-bottom: 0
+            display: inline-block
+            padding-right: 12px
 
-                @media screen and (min-width: config.$desktop)
-                    padding: 28px
-                    padding-bottom: 12px
+        &__table
+            @include config.table
 
+        &__table_row
+            @include config.table-row
 
-            #ingredients
-                margin-top: 32px
-                
-                li:first-child
-                    margin-top: 24px
+        &__table-label
+            @include config.table-label
 
-            #instructions
-                margin-top: 32px
-
-                ol
-                    li
-                        .container
-                            width: 100%
-                            max-width: 100%
-                            margin-left: 18px
-
-                            .value
-                                padding-right: 12px
-
-                            @media screen and (min-width: config.$desktop)
-                                width: 617px
-
-                    li:first-child
-                        margin-top: 24px
-
-            #nutrition
-                margin-top: 32px
-
-                p
-                    margin-bottom: 0
-                    display: inline-block
-                    padding-right: 12px
-
-                    @media screen and (min-width: config.$desktop)
-                        max-width: 617px
+        &__table-value
+            @include config.table-value
+            padding-right: 72px
 
     &__footer
         text-align: center
