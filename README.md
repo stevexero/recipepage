@@ -136,6 +136,89 @@ ul.custom-bullets li::before {
 
 - Inheretance - elaborate (from bullet style, fixed by assigning font to body)
 
+- Just like overriding the bullet styles from an unordered list above, I learned how to manipulate the numbers in an ordered list. It was a bit trickier, but adding a container div within my list item helped.
+
+```html
+<ol>
+  <li>
+    <div class="container">
+      <span class="label">Beat the eggs</span
+      ><span class="value"
+        >: In a bowl, beat the eggs with a pinch of salt and pepper until they
+        are well mixed. You can add a tablespoon of water or milk for a fluffier
+        texture.</span
+      >
+    </div>
+  </li>
+  <li>
+    <div class="container">
+      <span class="label">Heat the pan</span
+      ><span class="value"
+        >: Place a non-stick frying pan over medium heat and add butter or
+        oil.</span
+      >
+    </div>
+  </li>
+  <li>
+    <div class="container">
+      <span class="label">Cook the omelette</span
+      ><span class="value"
+        >: Once the butter is melted and bubbling, pour in the eggs. Tilt the
+        pan to ensure the eggs evenly coat the surface.</span
+      >
+    </div>
+  </li>
+  <li>
+    <div class="container">
+      <span class="label">Add fillings (optional)</span
+      ><span class="value"
+        >: When the eggs begin to set at the edges but are still slightly runny
+        in the middle, sprinkle your chosen fillings over one half of the
+        omelette.</span
+      >
+    </div>
+  </li>
+  <li>
+    <div class="container">
+      <span class="label">Fold and serve</span
+      ><span class="value"
+        >: As the omelette continues to cook, carefully lift one edge and fold
+        it over the fillings. Let it cook for another minute, then slide it onto
+        a plate.</span
+      >
+    </div>
+  </li>
+  <li>
+    <div class="container">
+      <span class="label">Enjoy</span
+      ><span class="value"
+        >: Serve hot, with additional salt and pepper if needed.</span
+      >
+    </div>
+  </li>
+</ol>
+```
+
+### CSS
+
+```css
+ol {
+  list-style-position: outside;
+  margin-left: -16px;
+}
+
+ol li::marker {
+  color: #854632;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ol li .container {
+  width: 272px;
+  margin-left: 18px;
+}
+```
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
