@@ -1,94 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap')
 
+// Breakpoints
 $desktop: 768px
 
-$background-color-primary: #F3E5D7
-$background-color-secondary: #FFFFFF
-$background-color-tertiary: #FFF7FB
-$heading-color-primary: #312E2C
-$heading-color-secondary: #854632
-$heading-color-tertiary: #7A284E
-$body-color-primary: #5F564D
-$rule-color: #E3DDD7
+// Color Palette
+$colors: (primary: #F3E5D7, secondary: #FFFFFF, tertiary: #FFF7FB, heading-primary: #312E2C, heading-secondary: #854632, heading-tertiary: #7A284E, body-primary: #5F564D, rule: #E3DDD7)
  
-$font-weight-light: 300
-$font-weight-normal: 400
-$font-weight-semi-bold: 500
-$font-weight-bold: 600
-$font-weight-heavy: 700
+// Font Weights
+$font-weights: (light: 300, normal: 400, semi-bold: 500, bold: 600, heavy: 700)
 
-$font-weight-heading-large: $font-weight-normal
-$font-weight-heading-medium: $font-weight-normal
-$font-weight-heading-small: $font-weight-semi-bold
-$font-weight-body-regular: $font-weight-normal
-$font-weight-body-bold: $font-weight-bold
-$font-weight-label: $font-weight-bold
-$font-weight-value: $font-weight-normal
+// Font Sizes
+$font-sizes: (heading-extra-large: 40px, heading-large: 36px, heading-medium: 28px, heading-small: 20px, body: 16px, label: 16px, value: 16px)
 
-$font-size-heading-large: 36px
-$font-size-heading-medium: 28px
-$font-size-heading-small: 20px
-$font-size-body: 16px
-$font-size-label: 16px
-$font-size-value: 16px
+// Line Heights
+$line-heights: (heading: 100%, body: 150%)
 
-$line-height-heading-large: 100%
-$line-height-heading-medium: 100%
-$line-height-heading-small: 100%
-$line-height-body: 150%
-$line-height-label: 150%
-$line-height-value: 150%
+// Border Radii
+$border-radii: (large: 24px, small: 12px)
 
-$border-radius-large: 24px
-$border-radius-small: 12px
-
-%outfit-regular
+%outfit
     font-family: "Outfit", sans-serif
     font-optical-sizing: auto
-    font-weight: $font-weight-light
+    font-weight: map-get($font-weights, light) //
     font-style: normal
-    line-height: $line-height-body
-    color: $body-color-primary
-
-%outfit-semi-bold
-    font-family: "Outfit", sans-serif
-    font-optical-sizing: auto
-    font-weight: $font-weight-semi-bold
-    font-style: normal
-
-%outfit-bold
-    font-family: "Outfit", sans-serif
-    font-optical-sizing: auto
-    font-weight: $font-weight-heading-small
-    font-style: normal
-    color: $heading-color-tertiary
-    font-size: $font-size-heading-small
+    line-height: map-get($line-heights, body) //
+    color: map-get($colors, body-primary) //
 
 %young-serif-regular
     font-family: "Young Serif", serif
-    font-weight: $font-weight-normal
+    font-weight: map-get($font-weights, normal)
     font-style: normal
-    line-height: $line-height-heading-large
+    line-height: map-get($line-heights, heading)
 
 @mixin heading-large
     @extend %young-serif-regular
-    font-size: $font-size-heading-large
-    color: $heading-color-primary
+    font-size: map-get($font-sizes, heading-large)
+    color: map-get($colors, heading-primary)
 
     @media screen and (min-width: $desktop)
-        font-size: 40px
+        font-size: map-get($font-sizes, heading-extra-large)
 
 @mixin heading-medium
     @extend %young-serif-regular
-    font-size: $font-size-heading-medium
-    color: $heading-color-secondary
-    font-weight: 400
+    font-size: map-get($font-sizes, heading-medium)
+    color: map-get($colors, heading-secondary)
 
 @mixin heading-small
-    @extend %outfit-bold
+    @extend %outfit
+    font-weight: map-get($font-weights, semi-bold)
+    color: map-get($colors, heading-tertiary)
+    font-size: map-get($font-sizes, heading-small)
 
 @mixin body-regular
-    @extend %outfit-regular
+    @extend %outfit
     margin-top: 24px
 
 @mixin custom-bullets
@@ -104,8 +68,8 @@ $border-radius-small: 12px
         position: absolute
         top: 50%
         left: 8px
-        font-size: 20px
-        color: $heading-color-tertiary
+        font-size: map-get($font-sizes, heading-small)
+        color: map-get($colors, heading-tertiary)
         transform: translateY(-50%)
 
 @mixin list-item
@@ -115,27 +79,27 @@ $border-radius-small: 12px
         margin-top: 24px
 
 @mixin label
-    @extend %outfit-semi-bold
+    @extend %outfit
     letter-spacing: 0.2px
-    color: $body-color-primary
-    font-weight: $font-weight-label
+    color: map-get($colors, body-primary)
+    font-weight: map-get($font-weights, bold)
 
 @mixin value
-    @extend %outfit-regular
+    @extend %outfit
 
 hr
     margin-top: 32px
-    border: 0.5px solid $rule-color
+    border: 0.5px solid map-get($colors, rule)
 
 @mixin ordered-list
     list-style-position: outside
     margin-left: -16px
     
     li::marker
-        @extend %outfit-bold
-        color: $heading-color-secondary
-        font-size: 16px
-        font-weight: 600
+        @extend %outfit
+        color: map-get($colors, heading-secondary)
+        font-size: map-get($font-sizes, body)
+        font-weight: map-get($font-weights, bold)
 
 @mixin table
     width: 100%
@@ -146,17 +110,17 @@ hr
         border-bottom: none
 
 @mixin table-label
-    @extend %outfit-regular
+    @extend %outfit
     margin-top: 24px
     padding: 10px 30px
-    border-bottom: 1px solid $rule-color
+    border-bottom: 1px solid map-get($colors, rule)
 
 @mixin table-value
-    @extend %outfit-semi-bold
-    color: $heading-color-secondary
-    font-weight: 600
+    @extend %outfit
+    color: map-get($colors, heading-secondary)
+    font-weight: map-get($font-weights, bold)
     padding: 10px 30px
-    border-bottom: 1px solid $rule-color
+    border-bottom: 1px solid map-get($colors, rule)
     padding-right: 72px
 
     @media screen and (min-width: $desktop)

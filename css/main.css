@@ -1,28 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
-.recipe-page, .recipe-page .recipe__description, .recipe-page .recipe__value, .recipe-page .recipe__table-label {
+.recipe-page, .recipe-page .recipe__description, .recipe-page .recipe__heading-small, .recipe-page .recipe__label, .recipe-page .recipe__value, .recipe-page .recipe__ordered-list li::marker, .recipe-page .recipe__table-label, .recipe-page .recipe__table-value {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   line-height: 150%;
   color: #5F564D;
-}
-
-.recipe-page .recipe__label, .recipe-page .recipe__table-value {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.recipe-page .recipe__heading-small, .recipe-page .recipe__ordered-list li::marker {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  color: #7A284E;
-  font-size: 20px;
 }
 
 .recipe-page .recipe__title, .recipe-page .recipe__heading-medium {
@@ -106,6 +90,9 @@ hr {
   }
 }
 .recipe-page .recipe__heading-small {
+  font-weight: 500;
+  color: #7A284E;
+  font-size: 20px;
   margin-bottom: -8px;
 }
 .recipe-page .recipe__list {
@@ -145,7 +132,6 @@ hr {
 .recipe-page .recipe__heading-medium {
   font-size: 28px;
   color: #854632;
-  font-weight: 400;
 }
 .recipe-page .recipe__instructions {
   margin-top: 32px;

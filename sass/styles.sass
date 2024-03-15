@@ -2,16 +2,16 @@
 
 .recipe-page
     width: 100vw
-    background-color: config.$background-color-primary
+    background-color: map-get(config.$colors, primary)
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
-    @extend %outfit-regular
+    @extend %outfit
 
     &__main
         width: 100%
-        background-color: config.$background-color-secondary
+        background-color: map-get(config.$colors, secondary)
 
         @media screen and (min-width: config.$desktop)
             box-sizing: border-box
@@ -20,13 +20,13 @@
             margin-bottom: 124px
             padding: 40px
             padding-bottom: 28px
-            border-radius: config.$border-radius-large
+            border-radius: map-get(config.$border-radii, large)
 
     &__image
         max-width: 100%
 
         @media screen and (min-width: config.$desktop)
-            border-radius: config.$border-radius-small
+            border-radius: map-get(config.$border-radii, small)
 
     .recipe
         max-width: 100%
@@ -48,8 +48,8 @@
             margin-top: 28px
             padding: 24px
             padding-bottom: 10px
-            background-color: config.$background-color-tertiary
-            border-radius: config.$border-radius-small
+            background-color: map-get(config.$colors, tertiary)
+            border-radius: map-get(config.$border-radii, small)
 
             @media screen and (min-width: config.$desktop)
                 padding: 28px
