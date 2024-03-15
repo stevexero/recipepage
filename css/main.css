@@ -77,6 +77,11 @@ li {
   font-weight: 600;
 }
 
+hr {
+  margin-top: 32px;
+  border: 0.5px solid #E3DDD7;
+}
+
 body {
   width: 100vw;
   background-color: #F3E5D7;
