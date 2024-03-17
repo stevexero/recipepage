@@ -26,7 +26,7 @@ The Recipe Page project was a fun and simple project to get my hands dirty in im
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://your-solution-url.com)
 - Live Site URL: [Live site](https://recipepagefementor.netlify.app/)
 
 ### Built with
